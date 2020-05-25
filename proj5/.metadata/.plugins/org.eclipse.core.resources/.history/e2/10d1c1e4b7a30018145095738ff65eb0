@@ -1,0 +1,75 @@
+package com.itbank.dao;
+import java.sql.*;
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Repository;
+
+@Repository("dao2")
+public class MemberDAO2 {
+	
+	DBConnectionMgr pool;
+	
+	public MemberDAO2() {  //데이터베이스의 특정 테이블에 접근하는 이 DAO 객체가 만들어지는 동시에 연결 pool도 생성
+		pool = DBConnectionMgr.getInstance();  //이 DAO2 클래스에 대해 객체 생성시 연결된 커넥션 생성해주기. 이미 연결이 존재한다면 해당 객체주소값 가져옴
+	}
+	
+	public MemberDTO select(MemberDTO dto) throws Exception {
+		
+		Connection con = pool.getConnection(); //연결되어있는 것 중 하나 임대해줘
+		
+		//3. SQL문 객체화
+		String sql = "select * from members where id=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		System.out.println("3번. SQL문 객체화");
+		ps.setString(1, dto.getId());
+		
+		//4. SQL문 실행요청
+		ResultSet rs = ps.executeQuery(); //결과값을 Set 집합형태로 받는다. 
+		System.out.println("4번. SQL문 실행 요청");
+		MemberDTO dto2 = null;
+		while(rs.next()) {
+			dto2 = new MemberDTO();
+			String id = rs.getString(1);
+			String pw = rs.getString(2);
+			String name = rs.getString(3);
+			String tel = rs.getString(4);
+			dto2.setId(id);
+			dto2.setPw(pw);
+			dto2.setName(name);
+			dto2.setTel(tel);
+		}
+		pool.freeConnection(con,ps,rs);  //다 같이 연결 close 가능
+		return dto2;
+	}
+	
+public ArrayList<MemberDTO> selectAll() throws Exception {
+		
+		Connection con = pool.getConnection(); //연결되어있는 것 중 하나 임대해줘
+		
+		//3. SQL문 객체화
+		String sql = "select * from members";
+		PreparedStatement ps = con.prepareStatement(sql);
+		System.out.println("3번. SQL문 객체화");
+		
+		//4. SQL문 실행요청
+		ResultSet rs = ps.executeQuery(); //결과값을 Set 집합형태로 받는다. 
+		System.out.println("4번. SQL문 실행 요청");
+		MemberDTO dto2 = null;
+		ArrayList<MemberDTO> list = new ArrayList<MemberDTO>();
+		while(rs.next()) {
+			dto2 = new MemberDTO();
+			String id = rs.getString(1);
+			String pw = rs.getString(2);
+			String name = rs.getString(3);
+			String tel = rs.getString(4);
+			dto2.setId(id);
+			dto2.setPw(pw);
+			dto2.setName(name);
+			dto2.setTel(tel);
+			list.add(dto2);
+		}
+		pool.freeConnection(con,ps,rs);  //다 같이 연결 close 가능
+		return list;
+	}
+	
+}

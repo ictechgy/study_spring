@@ -1,0 +1,16 @@
+package com.itbank.springStart;
+
+public class SamsungTV {
+	public void powerOn() {
+		System.out.println("삼성 TV 켜짐");
+	}
+	public void powerOff() {
+		System.out.println("삼성 TV 꺼짐");
+	}
+	public void volumeUp() {
+		System.out.println("삼성 TV 볼륨UP");
+	}
+	public void volumeDown() {
+		System.out.println("삼성 TV 볼륨DOWN");
+	}
+}

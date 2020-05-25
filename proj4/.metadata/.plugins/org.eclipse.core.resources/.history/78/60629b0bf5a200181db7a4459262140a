@@ -1,0 +1,34 @@
+package com.itbank.aopanno;
+
+@Component("show")
+public class ShowClass implements Show {
+
+	@Override
+	public void showBefore() {
+		System.out.println("공연이 시작되기 전");
+	}
+
+	@Override
+	public void showAfter() {
+		System.out.println("공연이 끝나려고 함");
+	}
+
+	@Override
+	public void showGreet() {
+		System.out.println("무대인사를 합니다.");
+	}
+
+	@Override
+	public String showGive() {
+		System.out.println("모든 관객에게 음료를 제공합니다.");
+		return "음료제공";
+	}
+	
+	@Override
+	public void showFail() {
+		System.out.println("공연이 실패");
+		int[] arr = new int[100];
+		arr[100] = 1;
+	}
+	
+}

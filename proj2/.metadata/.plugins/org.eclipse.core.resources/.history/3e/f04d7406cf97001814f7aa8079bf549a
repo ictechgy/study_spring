@@ -1,0 +1,23 @@
+package com.itbank.springStart;
+
+public class AbstractGame implements Game {
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void stop() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void fly() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

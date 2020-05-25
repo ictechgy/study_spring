@@ -1,0 +1,15 @@
+package com.itbank.springStart;
+
+public class TVUser2 {
+	public static void main(String[] args) {
+		BeanFactory factory = new BeanFactory();
+		Tv tv = factory.getBean("s");
+		
+		tv.powerOn();
+		tv.powerOff();
+		tv.volumeUp();
+		tv.volumeDown();
+		
+	}
+
+}

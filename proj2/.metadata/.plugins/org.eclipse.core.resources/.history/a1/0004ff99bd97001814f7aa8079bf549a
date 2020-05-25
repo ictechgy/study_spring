@@ -1,0 +1,11 @@
+package com.itbank.springStart;
+
+public class TVUser {
+	public static void main(String[] args) {
+		LgTv lg = new LgTv();
+		lg.turnOn();
+		lg.turnOff();
+		lg.soundUp();
+		lg.soundDown();
+	}
+}

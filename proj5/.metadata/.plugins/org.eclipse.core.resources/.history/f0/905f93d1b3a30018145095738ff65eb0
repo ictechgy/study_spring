@@ -1,0 +1,136 @@
+package com.itbank.dao;
+import java.sql.*;
+
+import org.springframework.stereotype.Repository;
+
+@Repository("dao")
+public class MemberDAO {
+	
+	public void insert(MemberDTO dto) throws Exception {
+		//1. 드라이버 로딩
+		Class.forName("com.mysql.jdbc.Driver"); //클래스를 못찾은경우를 위해 예외처리 해주어야함
+		System.out.println("1번. 드라이버 로딩성공");
+		
+		//2. DB연결
+		String url = "jdbc:mysql://localhost:3306/spring";
+		String user = "root";
+		String password = "1234";
+		Connection con = DriverManager.getConnection(url, user, password);
+		System.out.println("2번. DB연결");
+		
+		//3. SQL문 객체화
+		String sql = "insert into members values (?,?,?,?)";
+		PreparedStatement ps = con.prepareStatement(sql);
+		System.out.println("3번. SQL문 객체화");
+		ps.setString(1, dto.getId());
+		ps.setString(2, dto.getPw());
+		ps.setString(3, dto.getName());
+		ps.setString(4, dto.getTel());
+		
+		//4. SQL문 실행요청
+		ps.executeUpdate(); //또는 ps.executeQuery(); -> 결과값이 반환. Update는 결과가 숫자로 반환
+		System.out.println("4번. SQL문 실행 요청");
+		
+		ps.close();
+		con.close();
+	}
+	
+	public void delete(MemberDTO dto) throws Exception {  //매개변수로 DTO를 다 받아도 되고 레코드 구분 특정 값(Primary Key)만 받아서 처리해도 된다.
+		//1. 드라이버 로딩
+		Class.forName("com.mysql.jdbc.Driver"); //클래스를 못찾은경우를 위해 예외처리 해주어야함
+		System.out.println("1번. 드라이버 로딩성공");
+		
+		//2. DB연결
+		String url = "jdbc:mysql://localhost:3306/spring";
+		String user = "root";
+		String password = "1234";
+		Connection con = DriverManager.getConnection(url, user, password);
+		System.out.println("2번. DB연결");
+		
+		//3. SQL문 객체화
+		String sql = "delete from members where id=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		System.out.println("3번. SQL문 객체화");
+		ps.setString(1, dto.getId());
+		
+		//4. SQL문 실행요청
+		ps.executeUpdate(); //또는 ps.executeQuery(); -> 결과값이 반환. Update는 결과가 숫자로 반환
+		System.out.println("4번. SQL문 실행 요청");
+		
+		ps.close();
+		con.close();
+	}
+	
+	public void update(MemberDTO dto) throws Exception {
+		//1. 드라이버 로딩
+		Class.forName("com.mysql.jdbc.Driver"); //클래스를 못찾은경우를 위해 예외처리 해주어야함
+		System.out.println("1번. 드라이버 로딩성공");
+		
+		//2. DB연결
+		String url = "jdbc:mysql://localhost:3306/spring";
+		String user = "root";
+		String password = "1234";
+		Connection con = DriverManager.getConnection(url, user, password);
+		System.out.println("2번. DB연결");
+		
+		//3. SQL문 객체화
+		String sql = "update members set tel=? where id=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		System.out.println("3번. SQL문 객체화");
+		ps.setString(1, dto.getTel()); //변경되는 전화번호 값이 dto에 들어온다고 가정
+		ps.setString(2, dto.getId());
+		
+		//4. SQL문 실행요청
+		ps.executeUpdate(); //또는 ps.executeQuery(); -> 결과값이 반환. Update는 결과가 숫자로 반환
+		System.out.println("4번. SQL문 실행 요청");
+		
+		ps.close();
+		con.close();
+	}
+	
+	public MemberDTO select(MemberDTO dto) throws Exception {
+		//1. 드라이버 로딩
+		Class.forName("com.mysql.jdbc.Driver"); //클래스를 못찾은경우를 위해 예외처리 해주어야함
+		System.out.println("1번. 드라이버 로딩성공");
+		
+		//2. DB연결
+		String url = "jdbc:mysql://localhost:3306/spring";
+		String user = "root";
+		String password = "1234";
+		Connection con = DriverManager.getConnection(url, user, password);
+		System.out.println("2번. DB연결");
+		
+		//3. SQL문 객체화
+		String sql = "select * from members where id=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		System.out.println("3번. SQL문 객체화");
+		ps.setString(1, dto.getId());
+		
+		//4. SQL문 실행요청
+		ResultSet rs = ps.executeQuery(); //결과값을 집합형태로 받는다. 
+		System.out.println("4번. SQL문 실행 요청");
+		MemberDTO dto2 = null;
+		while(rs.next()) { //검색결과는 레코드(행)단위로 가져오게 된다. 따라서 next로 다음 행으로 넘어가줘야 함. 처음에는 빈 행쪽을 가리키는 상태
+			dto2 = new MemberDTO();
+			String id = rs.getString(1);
+			String pw = rs.getString(2);
+			String name = rs.getString(3);
+			String tel = rs.getString(4);   //번호가 아닌 필드값으로 가져와도 됨. 이를테면 rs.getString("tel")
+			/*	
+			System.out.println(id);
+			System.out.println(pw);
+			System.out.println(name);
+			System.out.println(tel);
+			이렇게 반환받은 값을 출력해도 되지만 사실 Main쪽에 반환해주는 것이 원칙이다. 따라서 메소드의 반환값 수정해주자
+			*/
+			dto2.setId(id);
+			dto2.setPw(pw);
+			dto2.setName(name);
+			dto2.setTel(tel);
+		}
+		rs.close();
+		ps.close();
+		con.close();
+		return dto2;
+	}
+}

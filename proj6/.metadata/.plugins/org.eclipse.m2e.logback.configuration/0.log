@@ -1,0 +1,56 @@
+2018-08-25 21:09:25,708 [Worker-9: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-08-25 21:09:55,932 [Worker-15: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.springframework.samples:SpringDAO2:0.0.1-SNAPSHOT @ C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringDAO2\pom.xml.
+2018-08-25 21:09:55,932 [Worker-7: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.springframework.samples:SpringDAO2:0.0.1-SNAPSHOT @ C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringDAO2\pom.xml.
+2018-08-25 21:09:56,485 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:09:56,488 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2018-08-25 21:09:56,494 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:09:56,494 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringDAO2\src\test\resources
+2018-08-25 21:09:58,825 [Worker-16: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.springframework.samples:SpringDAO2:0.0.1-SNAPSHOT @ C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringDAO2\pom.xml.
+2018-08-25 21:09:59,279 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:09:59,280 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-25 21:09:59,282 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:09:59,282 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringDAO2\src\test\resources
+2018-08-25 21:10:07,970 [Worker-22: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.springframework.samples:SpringMyBatis:0.0.1-SNAPSHOT @ C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringMyBatis\pom.xml.
+2018-08-25 21:10:08,954 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.3.1/mybatis-3.3.1.pom
+2018-08-25 21:10:09,100 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.3.1/mybatis-3.3.1.pom
+2018-08-25 21:10:09,237 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mybatis/mybatis-parent/26/mybatis-parent-26.pom
+2018-08-25 21:10:09,509 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mybatis/mybatis-parent/26/mybatis-parent-26.pom
+2018-08-25 21:10:09,644 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/1.2.4/mybatis-spring-1.2.4.pom
+2018-08-25 21:10:09,783 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/1.2.4/mybatis-spring-1.2.4.pom
+2018-08-25 21:10:09,921 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.pom
+2018-08-25 21:10:10,059 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.pom
+2018-08-25 21:10:10,353 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.3.1/mybatis-3.3.1.jar
+2018-08-25 21:10:15,743 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.3.1/mybatis-3.3.1.jar
+2018-08-25 21:10:15,913 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/1.2.4/mybatis-spring-1.2.4.jar
+2018-08-25 21:10:16,170 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/1.2.4/mybatis-spring-1.2.4.jar
+2018-08-25 21:10:16,341 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar
+2018-08-25 21:10:18,339 [Worker-22: Building workspace] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0.jar
+2018-08-25 21:10:18,495 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:10:18,496 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2018-08-25 21:10:18,502 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:10:18,502 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringMyBatis\src\test\resources
+2018-08-25 21:10:18,827 [Worker-5: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.springframework.samples:SpringMyBatis:0.0.1-SNAPSHOT @ C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringMyBatis\pom.xml.
+2018-08-25 21:10:20,205 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.3.1/mybatis-3.3.1-sources.jar
+2018-08-25 21:10:20,361 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:10:20,361 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-25 21:10:20,363 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:10:20,363 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringMyBatis\src\test\resources
+2018-08-25 21:10:21,304 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mybatis/mybatis/3.3.1/mybatis-3.3.1-sources.jar
+2018-08-25 21:10:21,336 [Worker-0: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mybatis:mybatis:3.3.1
+2018-08-25 21:10:21,474 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/1.2.4/mybatis-spring-1.2.4-sources.jar
+2018-08-25 21:10:21,636 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mybatis/mybatis-spring/1.2.4/mybatis-spring-1.2.4-sources.jar
+2018-08-25 21:10:21,660 [Worker-0: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mybatis:mybatis-spring:1.2.4
+2018-08-25 21:10:21,804 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0-sources.jar
+2018-08-25 21:10:22,197 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/ibatis/ibatis-core/3.0/ibatis-core-3.0-sources.jar
+2018-08-25 21:10:22,222 [Worker-0: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.ibatis:ibatis-core:3.0
+2018-08-25 21:10:22,429 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:10:22,430 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-25 21:10:22,431 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:10:22,432 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringMyBatis\src\test\resources
+2018-08-25 21:10:23,278 [Worker-14: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mybatis:mybatis:3.3.1
+2018-08-25 21:10:23,283 [Worker-14: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mybatis:mybatis-spring:1.2.4
+2018-08-25 21:10:23,287 [Worker-14: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.ibatis:ibatis-core:3.0
+2018-08-25 21:10:23,602 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:10:23,603 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-25 21:10:23,604 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-25 21:10:23,605 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USER-PC\Desktop\Spring Framework\20180825workspace\SpringMyBatis\src\test\resources

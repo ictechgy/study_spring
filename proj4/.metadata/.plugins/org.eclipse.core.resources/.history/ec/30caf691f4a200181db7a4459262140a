@@ -1,0 +1,6 @@
+package com.itbank.aopanno;
+
+public interface Show {
+	void showBefore();
+	
+}

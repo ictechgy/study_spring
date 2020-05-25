@@ -1,0 +1,9 @@
+package com.itbank.aop;
+
+public interface Board {
+	void insert();
+	void delete();
+	void update();
+	void select();
+	void selectAll();
+}

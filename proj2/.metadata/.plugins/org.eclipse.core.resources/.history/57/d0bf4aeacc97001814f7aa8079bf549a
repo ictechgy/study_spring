@@ -1,0 +1,16 @@
+package com.itbank.springStart;
+
+import java.util.ArrayList;
+
+public class CastingTest {
+	public static void main(String[] args) {
+		ArrayList food = new ArrayList();
+		//자료형 타입 아무거나 넣을 수 있음
+		
+		//전부 Object 형식으로 들어간다.
+		food.add("떡볶이"); //String
+		food.add(10000); //Integer
+		food.addAll(1.5);//Double
+		
+	}
+}

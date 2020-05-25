@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<context:component-scan base-package="com.itbank.di2"></context:component-scan>
+
+<bean id="cook" class="com.itbank.di2.JapanCook"></bean>
+
+
+<bean id="temp" class="com.itbank.di2.BlueCar">
+<constructor-arg ref="apple"></constructor-arg>  
+<constructor-arg ref="strongWindow"></constructor-arg>
+<constructor-arg value="1000"></constructor-arg>
+</bean>
+
+<bean id="strongWindow" class="com.itbank.di2.StrongWindow"></bean>
+
+<!-- <bean id="car" class="com.itbank.di2.YellowCar">
+<constructor-arg value="노랑카"></constructor-arg>
+<constructor-arg ref="strongWindow"></constructor-arg>
+<constructor-arg ref="banana"></constructor-arg>
+</bean> -->
+
+<bean id="black" class="com.itbank.di2.BlackCar">
+	<property name="strong" ref="strongWindow"></property>
+	<property name="speaker" ref="banana"></property>
+	<property name="speed" value="100"></property>
+</bean>
+
+<bean id="oldcar" class="com.itbank.di2.OldCar">
+	<constructor-arg value="10000"></constructor-arg>
+	<constructor-arg ref="apple"></constructor-arg>
+	<constructor-arg ref="strongWindow"></constructor-arg>
+</bean>
+
+<bean id="newcar" class="com.itbank.di2.NewCar">
+	<property name="name" value="뉴카"></property>
+	<property name="speaker" ref="banana"></property>
+	<property name="strong" ref="strongWindow"></property>
+</bean>
+
+<bean id="goldcar" class="com.itbank.di2.GoldCar">
+</bean>
+
+<bean id="collect" class="com.itbank.di2.CollectionBean">
+	<property name="addr">
+		<list>
+			<value>강남구</value>
+			<value>종로구</value>
+		</list>
+	</property>
+	<property name="hobby">
+		<set>
+			<value>run</value>
+			<value>walk</value>
+			<value>book</value>
+		</set>
+	</property>
+	<property name="cookie">
+		<map>
+			<entry>
+				<key>
+					<value>농심</value>
+				</key>
+				<value>고소미</value>
+			</entry>
+			<entry>
+				<key>
+					<value>삼양</value>
+				</key>
+				<value>빼빼로</value>
+			</entry>
+			<entry>
+				<key>
+					<value>농심</value>
+				</key>
+				<value>고소미</value>
+			</entry>
+		</map>
+	</property>
+</bean>
+
+
+
+
+
+</beans>

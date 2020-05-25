@@ -1,0 +1,20 @@
+package com.itbank.springStart;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class TVUser3 {
+	public static void main(String[] args) {
+		
+		AbstractApplicationContext factory = new GenericXmlApplicationContext();
+		
+		Tv tv = (Tv)factory.getBean("x");
+		
+		tv.powerOn();
+		tv.powerOff();
+		tv.volumeUp();
+		tv.volumeDown();
+		
+	}
+
+}

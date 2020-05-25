@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+<context:component-scan base-package="com.itbank.aop"></context:component-scan>
+<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+<!-- <bean id="log" class="com.itbank.aop.LogAdvice"></bean> -->
+<!-- <aop:config>
+	<aop:pointcut expression="execution(* com.itbank.aop..*.*(..))" id="all"/>
+	<aop:pointcut expression="execution(* com.itbank.aop..*.view*(..))" id="view"/>
+	<aop:pointcut expression="execution(* com.itbank.aop..*.basket*(..))" id="basket"/>
+	<aop:pointcut expression="execution(* com.itbank.aop..*.request*(..))" id="request"/>
+	
+	<aop:pointcut expression="execution(* com.itbank.aop..*.insert*(..))" id="insert"/>
+	<aop:pointcut expression="execution(* com.itbank.aop..*.delete*(..))" id="delete"/>
+	<aop:pointcut expression="execution(* com.itbank.aop..*.update*(..))" id="update"/>
+	<aop:pointcut expression="execution(* com.itbank.aop..*.select*(..))" id="select"/>
+	
+	<aop:pointcut expression="execution(* com.itbank.aop..*.orderView*(..))" id="orderView"/>
+	<aop:pointcut expression="execution(* com.itbank.aop..*.confirm*(..))" id="confirm"/>	
+	
+	<aop:aspect ref="log">
+		<aop:after method="printLog" pointcut-ref="all"/>
+		<aop:before method="login" pointcut-ref="view"/>
+		<aop:after method="logout" pointcut-ref="view"/>
+		<aop:after method="login" pointcut-ref="basket"/>
+		<aop:after method="logout" pointcut-ref="request"/>
+		
+		<aop:before method="login" pointcut-ref="insert"/>
+		<aop:after method="logout" pointcut-ref="insert"/>
+		
+		
+		<aop:after-returning method="returnCall" pointcut-ref="delete"/>
+		<aop:after-throwing method="errorCall" pointcut-ref="select"/>
+		<aop:around method="aroundCall" pointcut-ref="update"/>
+		
+		<aop:before method="login" pointcut-ref="orderView"/>
+		<aop:after method="logout" pointcut-ref="confirm"/>	
+		
+		<aop:before method="login" pointcut-ref="request"/>
+		<aop:after method="logout" pointcut-ref="request"/>
+		<aop:after-returning method="" pointcut-ref="search"/>
+		<aop:around method="arroudConfirm" pointcut-ref="basket"/>
+		
+	</aop:aspect>
+</aop:config>
+ -->
+
+</beans>

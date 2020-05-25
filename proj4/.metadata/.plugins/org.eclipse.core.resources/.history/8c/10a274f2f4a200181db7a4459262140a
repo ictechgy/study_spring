@@ -1,0 +1,9 @@
+package com.itbank.aopanno;
+
+public interface Show {
+	void showBefore();
+	void showAfter();
+	void showFail();
+	void showGreet();
+	void showGive();
+}

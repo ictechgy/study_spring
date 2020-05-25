@@ -1,0 +1,25 @@
+package com.itbank.dao;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class MemberMain3 {
+	public static void main(String[] args) throws Exception {
+		AbstractApplicationContext factory = new GenericXmlApplicationContext("dao.xml");
+		MemberDAO2 dao = (MemberDAO2)factory.getBean("dao2");
+		MemberDTO dto = new MemberDTO();
+		Scanner sc = new Scanner(System.in);
+		dto.setId(sc.next());  //사실 ID값만 필요하니 단일변수를 쓰도록 해도 된다.
+		
+		MemberDTO dto2 = dao.select(dto);
+		JOptionPane.showMessageDialog(null, dto2.getId());
+		JOptionPane.showMessageDialog(null, dto2.getPw());
+		JOptionPane.showMessageDialog(null, dto2.getName());
+		JOptionPane.showMessageDialog(null, dto2.getTel());
+		
+	}
+}
